@@ -16,7 +16,7 @@ class FeedbackSeeder extends Seeder
     public function run()
     {
         DB::table('tb_feedback')->insert([
-            'nr_feedback' => rand(1, 9),
+            'nr_feedback' => rand(1, 5),
             'ds_feedback' => Str::random(100),
             'id_user' => rand(1, 3),
         ]);
