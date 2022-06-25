@@ -18,7 +18,7 @@ class PhotoSeeder extends Seeder
         DB::table('tb_photo')->insert([
             'nm_photo' => Str::random(100),
             'ds_url' => 'www.chere.com/fotoexemplo.jpg',
-            'id_customer' => rand(1, 3),
+            'id_customer' => rand(1),
         ]);
     }
 }
