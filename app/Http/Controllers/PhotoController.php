@@ -36,7 +36,7 @@ class PhotoController extends Controller
         
         if(DB::table('tb_customer')->where('id', $request->id_customer)->exists()) { //se o customer existe
             $validator = Validator::make($request->all(), [ 
-                'image' => 'required|image:jpeg,png,jpg,gif,svg|max:2048' //verifica a extenção do arquivo e seu tamanho máximo
+                'image' => 'required|image:jpeg,png,jpg,gif,svg' //verifica a extenção do arquivo e seu tamanho máximo
             ]);
             if($validator->fails()) { //se não for imagem ou for maior que 2048
                 return response()->json([
