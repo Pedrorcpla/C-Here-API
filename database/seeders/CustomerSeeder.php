@@ -25,6 +25,7 @@ class CustomerSeeder extends Seeder
             'uf_state' => Str::random(2),
             'ds_servico' => Str::random(250),
             'cd_status' => rand(0, 1),
+            'ds_photo' => 'www.chere.com/exemplo1.png',
             'id_user' => rand(0, 1),
         ]);
     }
