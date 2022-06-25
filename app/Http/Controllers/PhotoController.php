@@ -38,7 +38,7 @@ class PhotoController extends Controller
             $validator = Validator::make($request->all(), [ 
                 'image' => 'required|image:jpeg,png,jpg,gif,svg' //verifica a extenção do arquivo e seu tamanho máximo
             ]);
-            if($validator->fails()) { //se não for imagem ou for maior que 2048
+            if($validator->fails()) { //se não for imagem ou tiver uma extenção desconhecida
                 return response()->json([
                     "message" => "Falha ao realizar upload!"
                 ], 404);
