@@ -28,6 +28,13 @@ Route::post('customer'          ,   'App\Http\Controllers\CustomerController@cre
 Route::put('customer/{id}'      ,   'App\Http\Controllers\CustomerController@updateCustomer');
 Route::delete('customer/{id}'   ,   'App\Http\Controllers\CustomerController@deleteCustomer');
 
+//Ações dos Layout dos Customers
+Route::get('customer-layout'           ,   'App\Http\Controllers\CustomerController@getAllCustomersLayout');
+Route::get('customer-layout/{id}'      ,   'App\Http\Controllers\CustomerController@getCustomerLayout');
+Route::post('customer-layout'          ,   'App\Http\Controllers\CustomerController@createCustomerLayout');
+Route::put('customer-layout/{id}'      ,   'App\Http\Controllers\CustomerController@updateCustomerLayout');
+Route::delete('customer-layout/{id}'   ,   'App\Http\Controllers\CustomerController@deleteCustomerLayout');
+
 //Ações de Feedback
 Route::get('feedback/customer/{id}' , 'App\Http\Controllers\FeedbackController@getFeedbackCustomer'); //retorna todos os feedbacks relacionados ao customer
 Route::get('feedback/{id}'          , 'App\Http\Controllers\FeedbackController@getFeedback'); //retorna o feedback de acordo com o id do feedback
